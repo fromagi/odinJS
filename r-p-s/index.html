@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  	<title>R-P-S</title>
+  	<link rel="stylesheet" href="style.css">
+	<script defer src="main.js"></script>
+</head>
+
+<div class="wrapper">
+
+<header>
+  <h1>Rock, Paper, Scissors</h1>
+</header>
+
+<div class="gut"></div>
+
+<body>
+
+  <div class="match">
+    <div class="section">
+      <button class="start pulseBtn mutton" id="startGame" type="submit">
+        <h2 id="gameControl">Start New Game</h2>
+      </button>
+    </div>
+    
+    <div class="plarray">
+    
+    <div class="players" id="player1">
+      <div id="p1"><h3 id="name1">Player 1</h3></div>
+      <form id="p1input">
+        <label for="p1name">Name: </label>
+        <input type="text" id="p1name" placeholder="press enter to save" maxlength="25">
+        <input type="submit" style="display: none" />
+      </form>
+      <br>
+      <div class="moves">
+        <div class="buttons">
+          <button class="mutton movs1" id="rock1" type="button"><svg class="ffs">
+            <use xlink:href="svg-defs.svg#rock" />
+            </svg></button>
+          <button class="mutton movs1" id="paper1"  type="button"><svg class="ffs">
+            <use xlink:href="svg-defs.svg#paper" />
+            </svg></button>
+          <button class="mutton movs1" id="scissors1" type="button"><svg class="ffs">
+            <use xlink:href="svg-defs.svg#scissors" />
+            </svg></button>
+        </div>
+        <div class="shoot">
+          <button class="mutton "id="shoot1" type="button">
+            <h4>Shoot</h4>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="outcome">
+      <div id="roundsbox">
+        <form id="roundsNo">
+          <label for="rounds" id="bestOf">Best of:</label>
+          <input type="number" id="rounds" name="rounds" placeholder="blank = no limit">
+          <input type="submit" style="display: none" />
+        </form>
+      </div>
+      <div id="status">
+        <p id="statusText">Click start!</p>
+      </div>
+	</div>
+    
+    <div class="players" id="player2">
+      <div id="p2"><h3>Player 2</h3></div>
+	  <form class="radiob" id="p2set">
+        <div><input type="radio" id="ai" name="p2" value="Computer" checked>
+          <label for="ai">Computer</label></div>
+        <div id="human"><input type="radio" id="hu" name="p2" value="Human" disabled>
+          <label for="hu">Human</label></div>
+      </form>
+      <br>
+      <div class="moves">
+        <div class="buttons">
+          <button class="mutton movs2" id="rock2" type="button"><svg class="ffs">
+            <use xlink:href="svg-defs.svg#rock" />
+          </svg></button>
+          <button class="mutton movs2" id="paper2" type="button"><svg class="ffs">
+            <use xlink:href="svg-defs.svg#paper" />
+          </svg></button>
+          <button class="mutton movs2" id="scissors2" type="button"><svg class="ffs">
+            <use xlink:href="svg-defs.svg#scissors" />
+          </svg></button>
+        </div>
+        <div class="shoot">
+          <button class="mutton "id="shoot2" type="button">
+            <h4>Shoot</h4>
+          </button>
+        </div>
+
+      </div>    
+    </div>
+    
+    </div>
+  
+  </div>
+
+  <div class="results">
+    <div class="innersults">
+  <div class="section2">
+    <h2>Match History</h2>
+  </div>
+  <div class="matches">
+    <table id="scoreLog">
+      <tr><td id="soloCell">&nbsp;</td></tr>
+	  </table>
+  </div>
+    </div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="section2"><h2>Scoreboard</h2></div>
+    <div class="scorebox">
+    <div class="scoreboxw">
+      <table class="scores">
+        <tr>
+          <th>P1</th>
+          <th>P2</th>
+        </tr>
+        <tr>
+          <td id="p1Score">0</td>
+          <td id="p2Score">0</td>
+        </tr>
+        <tr>
+          <td colspan="2" id="tieCount">(Ties: <span id="tieNo">0</span>)</td>
+        </tr>
+      </table>
+      <div id="streak">
+        <div id="streakp"><span id="streakID">Results</span> Streak:</div>
+        <div id="streakno"><p id="streakBoi">00</p></div>
+      </div>
+      <div id="resetwrap">
+		<button class="mutton" id="reset" type="submit"><p>Reset</p></button>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</body>
+
+<div class="gut2"></div>
+
+<footer>
+  <p>&#169; 2020 by Rem Fields</p>
+</footer>
+
+</div>
+</html>

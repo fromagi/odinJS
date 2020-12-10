@@ -1,0 +1,543 @@
+.ut {
+	grid-area: gut;
+}
+.gut2 {
+	grid-area: gut2;
+}
+
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: calc(12px + .25vmax);
+	background-color: #767676;
+	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+	min-width: 600px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+header {
+	grid-area: header;
+	text-align: center;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: content;
+}
+header h1 {
+	font-size: 3rem;
+	margin: 1rem 0 .225rem 0;
+}
+
+
+body {
+	background-color: rgba(0,0,0,0.6);
+	border: 3px solid white;
+	border-radius: 15px;
+	margin: auto;
+	min-width: 600px;
+}
+
+footer {
+	grid-area: footer;
+	text-align: right;
+	color: white;
+	font-size: .75rem;
+	padding-right: 1rem;
+}
+
+svg {
+	width: 3vmax;
+	height: 3vmax;
+}
+button > * {
+	pointer-events: none;	  
+}
+
+.ffs {
+	stroke: black;
+	stroke-width: .07rem !important;
+	fill: rgba(255,255,250) !important;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.start {
+	width: 20rem;
+	padding: .2rem .75rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.start h2 {
+	display: inline;
+	font-size: 2rem;
+	margin: 0 0 .1vmin 0;
+	padding: 0;
+}
+
+.pulseBtn {
+    background-color: hsl(222, 100%, 95%);
+    color: black;
+    border-radius: 6px;
+    box-shadow: 0 0 0 0 rgba(230, 237, 255, 0.7);
+    animation: pulse 1.75s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse {
+    to {
+      box-shadow: 0 0 0 30px rgba(230, 237, 255, 0);
+    }
+}
+
+form {
+	margin: auto;
+	padding: .5rem;
+}
+
+#p1input {
+	width: 100%;
+}
+
+#roundsNo{
+	padding-top: .25rem;
+	padding-bottom: 0;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: auto;
+}
+
+.buffer{
+	height: auto;
+}
+
+#gameControl {
+	letter-spacing: .04rem;
+}
+
+.mutton {
+    background-color: hsl(222, 100%, 95%);
+    border-radius: .5rem;
+    border-bottom: 4px solid hsl(221, 89%, 85%);
+    transition: all 0.1s ease-in-out;
+}
+
+.mutton:hover {
+    border-bottom-width: 0;
+}
+
+.movs1:focus {
+	transform: scale(1.1);
+	border-color: #470A68;
+	box-shadow: 0 0 10px #470A68;
+}
+
+*:focus {
+	outline: 0;	
+}
+
+.moves {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-top: .5rem;
+}
+
+.movs1, .movs2{
+	margin: 0px 5px 15px 15px;
+}
+
+.shoot {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 15px;
+	height: 3rem;
+}
+
+#shoot1, #shoot2 {
+	width: 50%;
+	height: auto;
+	margin-left: 15px;
+}
+
+.shoot h4{
+	font-size: 1rem;
+	padding: 0;
+	margin: .5rem;
+}
+.vapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper {
+	display: grid;
+	height: auto;
+	width: 80vw;
+	min-width: 600px;
+	grid-template-rows: repeat(5, minmax(min-content, max-content));
+	row-gap: 1rem;
+	grid-template-columns: .4fr repeat(3, 1fr) .4fr;
+	grid-template-areas: 
+		"header header header header header"
+		"gut match match match gut2"
+		"gut results results scoreboard gut2"
+		"gut results results scoreboard gut2"
+		"footer footer footer footer footer";
+}
+
+.outcome {
+	width: 20%;
+	height: auto;
+	min-width: 75px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+}
+
+.plarray {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+}
+
+.match {
+	grid-area: match;
+	display: flex;
+	flex-wrap: wrap;
+    margin-left: auto;
+    margin-right:auto;
+	width: 100%;
+	min-width: 333px;
+	height: auto;
+	text-align: center;
+	background-color: white;
+	border: 3px solid black;
+	border-radius: 15px;
+	align-self: start;
+	margin-bottom: .5rem;
+	
+}
+
+.section {
+	width: 100%;
+	height: 4rem;
+	background-color: #470A68;
+	border-radius: 12px 12px 0px 0px;
+	border-bottom: solid 3px black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .5rem;
+}
+
+/* possible need for line breaks
+.section::after{
+	content: '';
+	width: 100%;
+}*/
+
+.players {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 40%;
+	height: auto;
+	min-width: 120px;
+}
+
+#p1, #p2 {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+}
+
+#p1 h3, #p2 h3{
+	margin-top: .75rem;
+	margin-bottom: 0px;
+	font-size: 1.5rem;
+}
+
+#p1name, #rounds {
+	width: 7rem;
+	height: 1rem;
+	border-radius: 5px;
+	min-width: 40px;
+	font-size: 1rem;
+}
+
+#p1name::placeholder{
+	text-align: center;
+	font-size: .75rem;
+}
+
+#roundsbox {
+	margin-top: .75rem;
+	font-size: 1.25rem;
+}
+
+#rounds {
+	margin-top: .55rem;
+	width: 80%;
+}
+
+#rounds::placeholder{
+	font-size: .75rem;
+}
+
+#status {
+	font-size: 1.5rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+#statusText {
+	margin: auto;
+	color: red;
+}
+
+#player2, #player1 {
+	margin-right: 10px;
+}
+
+#p2set {
+	text-align: center;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+#human {
+	margin-left: 3%;
+}
+
+.results {
+	grid-area: results;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 1rem;
+	width: 100%;
+	min-width: 100px;
+	height: auto;
+}
+
+.innersults {
+	padding-bottom: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: 1rem;
+	width: 100%;
+	min-width: 100px;
+	height: auto;
+	text-align: center;
+	background-color: white;
+	border: 3px solid black;
+	border-radius: 15px;
+	align-self: start;
+}
+
+.matches{
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 100%;
+	height: 16.3rem;
+}
+
+.scoreboard {
+	grid-area: scoreboard;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	min-width: 100px;
+	height: auto;
+	text-align: center;
+	background-color: white;
+	border: 3px solid black;
+	border-radius: 15px;
+	align-self: start;
+	padding-bottom: 1rem;
+}
+
+.scoreboxw{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.scorebox{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	width:100%;
+	height: 15.8rem;
+	min-height: 200px;
+	padding-top: .5rem;
+}
+.scores {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	font-size: 2.5vmin;
+	width: 80%;
+	border-collapse: collapse;
+}
+
+.scores tr, .scores td{
+	padding: 3% 5% 3% 5%;
+}
+
+.scores td:first-child  {
+	border-right: 3px black solid;
+}
+
+.scores th {
+	border-bottom: 3px black solid
+}
+
+#tieCount{
+	font-size: .75rem;
+	border-right: none;
+	padding-bottom: 0;
+}
+
+#streak {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2% 0 2% 0;
+	height: 6rem;
+	width: 100%;
+}
+
+#streakp, #streakp p{
+	font-size: 125%;
+	margin: 0 auto 0 auto;
+}
+
+#streakno {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	color: red;
+	font-size: 400%;
+}
+
+#streakno p {
+	margin: 0;
+	padding: 0;
+	line-height: 5%;
+}
+
+#streakBoi {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+#resetwrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 3rem;
+}
+
+#reset {
+	width: auto;
+	margin: 0 auto 0 auto;
+}
+
+#reset p {
+	display: inline;
+	font-size: 1.5rem;
+	margin: 0px;
+	text-align: center;
+}
+
+.section2 {
+	width: 100%;
+	height: 1.5rem;
+	background-color: #470A68;
+	color: white;
+	border-radius: 12px 12px 0px 0px;
+	border-bottom: solid 3px black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .5rem;
+}
+
+#scoreLog tr:nth-child(even) {
+	background-color: #c6c6c6;
+}
+
+#scoreLog tr{
+	border-bottom: 3px solid black;
+	height: 1.5rem;
+}
+
+#scoreLog td {
+	padding: 1% 2% 1% 2%;
+	color: black;
+	font-size: 1rem;
+}
+
+#scoreLog h6 {
+	font-size: 2.25rem;
+	padding: 0;
+	margin: 0;
+}
+
+#scoreLog {
+	height: 98%;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+.section3 {
+	width: 100%;
+	height: 1.5rem;
+	background-color: blueviolet;
+	border-radius: 12px 12px 0px 0px;
+	border-bottom: solid 3px black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .5rem;
+}
+
+.selectFlag {
+	transform: scale(1.1);
+	border-color: grey;
+	box-shadow: 0 0 10px black;
+}
+

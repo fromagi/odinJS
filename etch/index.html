@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  	<title>Etch-a-Sketch</title>
+  	<link rel="stylesheet" href="style.css">
+	<script defer src="main.js"></script>
+  </head>
+
+<div id="case">
+  <div id="title"><span id="magic">MAGIC</span>&nbsp;<span id="logo">Etch A Sketch</span>&nbsp;<span id="screen">SCREEN</span></div>
+  <div id="grid">
+    <!-- Grids will autopopulate after button click -->
+  </div>
+  <div id="knobox">
+    <div class="circle" id="knobLeft">
+      <div class="innerCircle">
+      </div>
+    </div>
+    <div id="controls">
+      <button id="gridSet" class="choices" onclick="getResolution()">Set</button>
+      <button id="shake" class="choices" onclick="clearGrid()" >Shake</button>
+    </div>
+    <div class="circle" id="knobRight">
+      <div class="innerCircle">
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
