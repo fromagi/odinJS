@@ -237,7 +237,7 @@ calcTotal.addEventListener("click", equalPress);
 // get answer and stage for next calculation 
 function equalPress(){ 												
 	sendToLog = true;
-	if(lastOp) {
+	if(lastOp && (valArray[0] > 0 && valArray.length >= 1)) {
 		equalCont = true;
 	}
 	if(valArray.length == 1 && equalCont) {
@@ -298,7 +298,9 @@ function clearPress() {
 	storedVal = 0;
 	total = 0;
 	lastVal = 0;
+	comboVal = 0;
 	lastOp = null;
+	operation = null;
 	screenVal.innerText = storedVal;
 	valArray = [];
 	logArray = [];
