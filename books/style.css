@@ -130,7 +130,7 @@ input[type=checkbox] {
 main {
 	background-color: white;
 	width: 80%;
-	height: 100%;
+	height: auto;
 	margin: 0 auto;
 	direction: ltr;
 }

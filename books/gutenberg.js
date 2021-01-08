@@ -6,21 +6,16 @@ window.onload = onloadActions();
 function onloadActions() {
 	console.log("Onload Actions, GO!");
 	handleStorage();
+	createReadBtns();
 	createDelBtns();
 }
 
 const bookFactory = (title, author, pageCount, read) => {
-	let bookTitle = title;
-	let bookAuthor = author;
-	let bookPageCount = pageCount;
+	const bookTitle = title;
+	const bookAuthor = author;
+	const bookPageCount = pageCount;
 	let bookRead = read;
-	/*
-	setReadStatus(read) {
-		this.read = read;
-		return this;
-	};
-	*/
-	let bookInfo = () => {
+	const bookInfo = () => {
 		return `${ bookTitle } by ${ bookAuthor }, ${ bookPageCount } pages, ${ bookRead ? "already read" : "not read yet" }.`;
 	} 
 	return {
@@ -62,6 +57,24 @@ class Book {
 	}
 }
 */
+function createReadBtns() {
+	const readChanger = document.querySelectorAll(".changeRead");
+	Array.from(readChanger).forEach(function(div) {
+		div.addEventListener("click", flipReadStatus)
+	});
+}
+
+function flipReadStatus() {
+	const targetBook = event.target.parentElement.id;
+	const targetCard = document.getElementById(targetBook);
+	const matchIndex = matchBookTitle(targetBook);
+	myLibrary[matchIndex].read = !myLibrary[matchIndex].read;
+	const targetLabel = targetCard.querySelector(".changeRead");
+	targetLabel.innerText = `${ myLibrary[matchIndex].read ? "Set to Unread" : "Set to Read" }`;
+	const targetStatus = targetCard.querySelector(".bookStatus");
+	targetStatus.innerText = `${ myLibrary[matchIndex].read ? "Read Already" : "Not Read Yet" }`;
+	storeShelf();
+}
 
 function createDelBtns() {
 	const delBtns = document.querySelectorAll(".deleteBook");
@@ -122,7 +135,7 @@ function updateShelf() {
 		const currentBook = myLibrary[i].bookTitle;
 		const currentAuthor = myLibrary[i].bookAuthor;
 		const currentLength = myLibrary[i].bookPageCount;
-		const currentStatus = myLibrary[i].bookRead;
+		const currentStatus = myLibrary[i].read;
 		const bookId = currentBook.toLowerCase().replace(/ +/g, '-');
 		const bookElement = document.getElementById(bookId)
 		console.log(bookId);
@@ -142,9 +155,10 @@ function updateShelf() {
 					<div class="bookLength">${ currentLength } Pages</div>
 					<div class="bookStatus">${ currentStatus ? 'Read Already' : 'Not Read Yet' }</div>
 				</div>
-				<button class="changeToRead">Mark as Read</button>
+				<button class="changeRead">${ currentStatus ? 'Set to Unread' : 'Set to Read' }</button>
 			`
 			shelf.appendChild(libraryBook);
+			createReadBtns();
 			createDelBtns();
 		}
 
