@@ -19,7 +19,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	margin: 0px;
@@ -31,10 +31,24 @@ body {
 	background-color: magenta;
 }
 
-#gameBoard {
+.players {
+	background-color: cyan;
+	width: 30rem;
+	height: 30rem;
+}
+
+.element-hide {
+	display: none;
+}
+
+.names {
+	padding: 1rem 0 1rem 0;
+}
+
+#game-board {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	margin: 0 2rem 0 2rem;
+	margin: 2rem;
 	border: .25rem solid white;	
 }
 

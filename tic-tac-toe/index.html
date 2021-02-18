@@ -8,17 +8,45 @@
 </head>
 
 <body>
-<div id="gameBoard">
+<div class="players" id="player1">
+	PLAYER ONE INFO
+	<div id="card-p1">
+		<div class="names" id="name-p1">
+		<form id="form-p1">
+			<label for="set-name1">Name: </label>
+			<input type="text" id="set-name1" 
+				placeholder="press enter to save" maxlength="25">
+			<input type="submit" style="display: none" />
+		</form>
+		<div class="element-hide name-display" id="inputP1"></div>
+		</div>
+	</div>
+</div>
+<div id="game-board">
 <!-- Populate Game Grid -->
-	<div class="spaces" id="box0">1</div>
-	<div class="spaces" id="box1">2</div>
-	<div class="spaces" id="box2">3</div>
-	<div class="spaces" id="box3">4</div>
-	<div class="spaces" id="box4">5</div>
-	<div class="spaces" id="box5">6</div>
-	<div class="spaces" id="box6">7</div>
-	<div class="spaces" id="box7">8</div>
-	<div class="spaces" id="box8">9</div>
+	<div class="spaces" id="box0">&nbsp;</div>
+	<div class="spaces" id="box1">&nbsp;</div>
+	<div class="spaces" id="box2">&nbsp;</div>
+	<div class="spaces" id="box3">&nbsp;</div>
+	<div class="spaces" id="box4">&nbsp;</div>
+	<div class="spaces" id="box5">&nbsp;</div>
+	<div class="spaces" id="box6">&nbsp;</div>
+	<div class="spaces" id="box7">&nbsp;</div>
+	<div class="spaces" id="box8">&nbsp;</div>
+</div>
+<div class="players" id="player2">
+	PLAYER TWO INFO
+	<div id="card-p2">
+		<div class="names" id="name-p2">
+		<form id="form-p2">
+			<label for="set-name2">Name: </label>
+			<input type="text" id="set-name2" 
+				placeholder="press enter to save" maxlength="25">
+			<input type="submit" style="display: none" />
+		</form>
+		<div class="element-hide name-display" id="inputP2"></div>
+		</div>
+	</div>
 </div>
 </body>
 </html>
