@@ -8,44 +8,55 @@
 </head>
 
 <body>
-<div class="players" id="player1">
-	PLAYER ONE INFO
-	<div id="card-p1">
-		<div class="names" id="name-p1">
-		<form id="form-p1">
-			<label for="set-name1">Name: </label>
-			<input type="text" id="set-name1" 
-				placeholder="press enter to save" maxlength="25">
-			<input type="submit" style="display: none" />
-		</form>
-		<div class="element-hide name-display" id="inputP1"></div>
+<div class="banner" id="game-info">TIC-TAC-TOE, ready GO!</div>
+<div id="player-info">
+	<div class="players" id="player1">
+		<h2>PLAYER ONE INFO</h2>
+		<div id="card-p1">
+			<div class="names" id="name-p1">
+			<form class="name-form" id="form-p1">
+				<label for="set-name1"><b>Name: </b></label>
+				<input type="text" id="set-name1" autocomplete="off" 
+					placeholder="press enter to save" maxlength="25">
+				<input type="submit" style="display: none" />
+			</form>
+			<div class="element-hide name-display" id="inputP1"></div>
+			<div class="wins-count" id="wins-p1"><b>Wins: </b>
+				<span id="count-p1">0</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="players" id="player2">
+		<h2>PLAYER TWO INFO</h2>
+		<div id="card-p2">
+			<div class="names" id="name-p2">
+			<form class="name-form" id="form-p2">
+				<label for="set-name2"><b>Name: </b></label>
+				<input type="text" id="set-name2" autocomplete="off"
+					placeholder="press enter to save" maxlength="25">
+				<input type="submit" style="display: none" />
+			</form>
+			<div class="element-hide name-display" id="inputP2"></div>
+			<div class="wins-count" id="wins-p2"><b>Wins: </b>
+				<span id="count-p2">0</span></div>
+			</div>
 		</div>
 	</div>
 </div>
 <div id="game-board">
 <!-- Populate Game Grid -->
-	<div class="spaces" id="box0">&nbsp;</div>
-	<div class="spaces" id="box1">&nbsp;</div>
-	<div class="spaces" id="box2">&nbsp;</div>
-	<div class="spaces" id="box3">&nbsp;</div>
-	<div class="spaces" id="box4">&nbsp;</div>
-	<div class="spaces" id="box5">&nbsp;</div>
-	<div class="spaces" id="box6">&nbsp;</div>
-	<div class="spaces" id="box7">&nbsp;</div>
-	<div class="spaces" id="box8">&nbsp;</div>
 </div>
-<div class="players" id="player2">
-	PLAYER TWO INFO
-	<div id="card-p2">
-		<div class="names" id="name-p2">
-		<form id="form-p2">
-			<label for="set-name2">Name: </label>
-			<input type="text" id="set-name2" 
-				placeholder="press enter to save" maxlength="25">
-			<input type="submit" style="display: none" />
-		</form>
-		<div class="element-hide name-display" id="inputP2"></div>
-		</div>
+<div class="banner" id="game-buttons">
+	<button class="btn" id="btn-reset" onclick="thisGame.resetBoard()">
+		Reset Board
+	</button>
+	<div id="ai-slider">
+		<label class="switch btn" id="switch-ai">
+			<input type="checkbox" autocomplete="off">
+			<span class="slider round"></span>
+		</label>
+		<div id="ai-label"><b>AI Opponent:</b><br>
+		<span id="ai-status">DISABLED</span></div>
 	</div>
 </div>
 </body>

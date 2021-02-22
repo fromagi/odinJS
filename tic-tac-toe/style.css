@@ -31,10 +31,44 @@ body {
 	background-color: magenta;
 }
 
+@media screen and (max-width: 1000px) {
+	.body {
+		flex-direction: column;	  
+	}
+}
+
+.banner {
+	width: 100%;
+	color: white;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#game-info {
+	align-self: flex-end;
+	background-color: black;
+	font-size: 2rem;
+	padding: .5rem 0 .5rem 0;
+}
+
+#game-buttons {
+	align-self: flex-start;
+}
+
+#player-info {
+	display: flex;
+	flex-direction: column;
+}
+
 .players {
 	background-color: cyan;
-	width: 30rem;
-	height: 30rem;
+	padding: 1rem;
+	margin: 1rem;
+}
+
+.players h2 {
+	margin-top: 0;
 }
 
 .element-hide {
@@ -42,7 +76,16 @@ body {
 }
 
 .names {
-	padding: 1rem 0 1rem 0;
+	padding: 0 0 1rem 0;
+	font-size: 1.25rem;
+}
+
+.name-display {
+	padding-top: 1.5px;
+}
+
+.wins-count {
+	padding-top: .25rem;
 }
 
 #game-board {
@@ -50,6 +93,7 @@ body {
 	grid-template-columns: 1fr 1fr 1fr;
 	margin: 2rem;
 	border: .25rem solid white;	
+	user-select: none;
 }
 
 .spaces {
@@ -63,3 +107,105 @@ body {
 	font-size: 9rem;
 	border: .25rem solid white;
 }
+
+button {
+    background-color: hsl(222, 100%, 95%);
+    color: black;
+    border-radius: 6px;
+	font-size: 1.5rem;
+}
+
+.pulseBtn {
+    box-shadow: 0 0 0 0 rgba(230, 237, 255, 0.7);
+    animation: pulse 1.75s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+
+@keyframes pulse {
+    to {
+      box-shadow: 0 0 0 30px rgba(230, 237, 255, 0);
+    }
+}
+
+
+#game-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+#btn-reset {
+	margin-right: 5rem;
+}
+
+#ai-slider {
+	display: flex;
+}
+
+#ai-label {
+	margin-top: -2px;
+	padding-left: 1rem;
+	text-align: left;
+}
+
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
