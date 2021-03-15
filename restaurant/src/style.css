@@ -1,0 +1,179 @@
+body {
+	background-color: lightcyan;
+	font-family: 'Roboto', arial, sans-serif;
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+.fixed-center {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#main-nav {
+	width: 100%;
+	background-color: red;
+	border-top: .225rem solid black;
+	border-bottom: .225rem solid black;
+}
+
+#main-nav ul {
+	border: 1px solid rgb(212, 20, 20); 
+	list-style: none; 
+	margin: 0; 
+	padding: 0; 
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+}
+
+#main-nav li {
+	color: white;
+	list-style-type: none;
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	border: .2rem solid transparent;
+	user-select: none;
+	cursor: pointer;
+}
+
+#main-nav li:hover {
+	background-color: gold;
+	color: red;
+	border-color: white;
+	transition: ease-out 1s;
+}
+
+#main-logo {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 100%;
+}
+
+#div-logo {
+	width: auto;
+	height: 25vh;
+	flex-shrink: 0;
+}
+
+#content {
+	width: 75%;
+	margin: 0 auto;
+	padding: 1.5rem 3rem;
+	overflow-y: scroll;
+	background-color: black;
+}
+
+.content-image {
+	float: left;
+	margin-right: 1rem;
+}
+
+.content-header {
+	color: gold;
+	white-space: nowrap;
+}
+
+.content-header h2 {
+	margin: .25rem 0;
+	padding: .25rem 0;
+	font-size: 2rem;
+}
+
+.content-copy {
+	color: red;
+	font-size: 1.1rem;
+	text-align: justify;
+}
+
+#menu-grid {
+}
+
+.menu-item {
+	color: white;
+	margin-bottom: 1.5rem;
+}
+
+.menu-item-main {
+	margin-bottom: .5rem;
+	display: flex;
+	align-items: baseline;
+}
+
+.menu-item h3 {
+	font-size: 1.5rem;
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-dots {
+	flex: 1;
+	overflow: hidden;
+	padding-left: .75rem;
+	font-size: 1.5rem;
+	letter-spacing: .25rem;
+	user-select: none;
+}
+
+.menu-price {
+	font-size: 1.5rem;
+	padding-left: .75rem;
+	float: right;
+}
+
+.menu-description {
+	padding-right: 10%;
+	font-size: 1.25rem;
+}
+
+
+@media (max-width: 900px) {
+	* {
+		box-sizing: border-box;
+	}
+
+	#content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+	}
+
+	.content-header {
+		text-align: center;
+	}
+
+	.content-image {
+		float: none;
+		margin: 0 auto;
+		width: auto;
+		height: 50vw;
+	}
+
+	.content-image img {
+		max-width: 100%;
+		height: auto;
+		max-height: 100%;
+	}
+
+	.content-copy {
+		margin: 0 auto;
+	}
+
+	.menu-dots {
+		width: 10px; /* I have no idea why this works */
+	}
+}
+
+

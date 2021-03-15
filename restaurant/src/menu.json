@@ -1,0 +1,76 @@
+[	
+	{
+		"name": "The Basic", 
+		"description": "Soyburger with Pick'ls™",
+		"price": "2¥" 
+	},
+	{	
+		"name": "The Hugh™",
+		"description": "Soyburger with processed cheese-flavored food and fried egg substitute",
+		"price": "3¥" 
+	},
+	{
+		"name": "The Beast™",
+		"description": "Triple soyburger with processed cheese-flavored food and fried egg substitute",
+		"price": "5¥"
+	},	
+	{	
+		"name": "The Beast Deluxe™",
+		"description": "The Beast™, now with three strips of bacon substitute!",
+		"price": "7¥" 
+	},
+	{
+		"name": "The Jolly Meal",
+		"description": "Soyburger, HughFries, and a surprise toy!",		
+		"price": "5¥" 
+	},
+	{
+		"name": "Hugh Sliders (3)", 
+		"description": "Bite-sizesd soyburgers with processed cheese-flavored food",
+		"price": 3¥
+	},
+	{
+		"name": "The Kriller™",
+		"description": "Shaped krill patty, grilled to perfection. Now with Pick'ls™!",
+		"price": "3¥"
+	},
+	{
+		"name": "Kriller Deluxe",
+		"description": "Shaped krill patty, grilled to perfection, with processed cheese-flavored food",
+		"price": "5¥"
+	},
+		"name": "The Egg'r™",
+		"description": "Fried egg substitute and processed cheese-flavored food",
+		"price": "3¥"
+	},
+	{
+		"name": "HughFries",
+		"description": "Hand-cut cassava, deep-fried using our secret method! In three handy sizes!",
+		"price": "2¥/4¥/6¥"
+	},
+	{
+		"name": "The Green Plate",
+		"description": "Vegetarian salad with Pick'ls™",
+		"price": "4¥",
+	},
+	{
+		"name": "The Squealer™",
+		"description": "Pork-flavored soy patty, infused with BBQ flavor!",
+		"price": "4¥"
+	},
+	{
+		"name": "Soykaf",
+		"description": "Regular and \"de-kaf\"",
+		"price": "1¥"
+	},
+	{
+		"name": "Soyshake",
+		"description": "Chocolate, vanilla or strawberry flavored, frozen, and blended beverage"
+		"price": "2¥"
+	},
+	{
+		"name": "Soysundae",
+		"description": "Softserve soycream injected with up to 15 flavors",
+		"price": "2¥"
+	}
+]
