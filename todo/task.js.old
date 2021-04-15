@@ -1,0 +1,69 @@
+let projectList = [{Default: []}];
+
+function getProject(value) {
+  const index = projectList.findIndex(project => Object.keys(project) == value);
+  if (index != -1) {
+    const key = value;
+    const project = projectList[index][key];
+    return project;
+  } else {
+    console.error(`No project found for entry: ${ value }`);
+  }
+}
+
+function getTask(value) {
+  // Might need to specify project as an arg as well... tbd 
+}
+
+class Task {
+  constructor(name, project = "Default") {
+    this.name = name;
+    this.project = project;
+    this.updateProjectTasks();
+    //Object.preventExtensions(this);
+  }
+  details = null;
+  dueDate = null;
+  priority = null;
+
+  status = null;
+  notes = null;
+  checklist = [];
+  remove() {
+    const project = getProject(this.project);
+    const index = project.findIndex( task => task == this.name)
+    project.splice(index, 1);
+  }
+  updateProjectTasks() {
+    if (!projectList.some(project => Object.keys(project) == this.project)) {
+      const newProject = new Project(this.project); 
+    }
+    const project = getProject(this.project);
+    project.push(this.name);
+  }
+}
+
+class Project extends Task {
+  constructor(name) {
+    super(name);
+    this.updateProjectList();
+    this.taskList = [];
+  }
+  updateProjectList() {
+    projectList.push({[this.name]: []});
+  }
+  remove() {
+    const project = getProject(this.name);
+    if (project.length > 0) {
+      console.warn(`${ this.name } is not empty... it contains ${ project.length } tasks.\nDelete or reassign these tasks before removing the project.`);
+    } else {
+      console.log("Removing project...");
+    }
+  }
+  listTasks() {
+    const result = getProject(this.name);
+    console.table(result);
+  }
+}
+
+export { Task, Project, projectList, getProject }
